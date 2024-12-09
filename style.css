@@ -43,6 +43,10 @@ body{
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s ease;
+    text-shadow: 1px 1px 1px #D3D3D3;
+    text-shadow: 1px 4px 1px #D3D3D3;
+    text-shadow: 1px 2px 1px #D3D3D3;
+    text-shadow: 1px 3px 1px #D3D3D3;
 }
 
 /* .logo:hover{
@@ -51,6 +55,10 @@ body{
 
 .logo span{
     text-shadow: 0 0 25px #EDEDED;
+    text-shadow: 1px 1px 1px #D3D3D3;
+    text-shadow: 1px 4px 1px #D3D3D3;
+    text-shadow: 1px 2px 1px #D3D3D3;
+    text-shadow: 1px 3px 1px #D3D3D3;
 }
 
 .navbar a{
@@ -98,6 +106,26 @@ span{
     font-weight: bold;
     margin-top: 1.5rme;
     line-height: 1;
+    transition: 0.3s;
+    text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #cdcdcd 0%,
+    #3e3e3e 29%,
+    #a4a4a4 67%,
+    #676767 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+      font-size: 100px;
 }
 .home-content p{
     font-size: 1.5rem;
@@ -282,7 +310,10 @@ span{
 .skill h2{
     margin-bottom: 5rem;
     color: #333;
+    stroke: #ffa5d8;
+    animation: textAnimate 5s infinite alternate;
 }
+
 .skill-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -326,6 +357,22 @@ span{
     max-height: 100px;
     line-height: 1.7;
     justify-content: center;
+}
+
+.activity{
+    background: #EDEDED;
+    color: #333;
+}
+.activity h2{
+    margin-bottom: 5rem;
+    color: #333;
+}
+
+.activity-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
 }
 
 @media(max-width:991px){
@@ -417,3 +464,27 @@ span{
         grid-template-columns: repeat(1,1fr);
     }
 }
+
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill:hsl(189, 68%, 75%)
+  
+    }
+    
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: hsla(189, 68%, 75%,0%)
+    }
+    
+  }
+
+
